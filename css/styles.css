@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;800;900&display=swap");
+
+:root {
+  --color-background: #252525;
+  --color-primary: #f29000;
+  --color-text: #b9b9b9;
+  --color-ui-background: #2d2d2d;
+  --color-border: #707070;
+}
+
+.ranking::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.ranking::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+.ranking::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0px solid salmon;
+  color: var(--color-text);
+}
+
+h1,
+h2 {
+  color: white;
+  margin: 30px;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: var(--color-background);
+  overflow: hidden;
+}
+
+.league-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  min-height: 12rem;
+  background-color: var(--color-ui-background);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ranking {
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+table {
+  width: 100%;
+}
+
+table tr {
+  height: 80px;
+  margin-top: 1rem;
+}
+
+table tr td {
+  width: 100%;
+}
+
+table tr td .rank {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+table tr td .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+table tr td .name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+table tr td .point {
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+table tr td:nth-child(1) {
+  width: fit-content;
+  padding: 0 15px;
+  text-align: center;
+}
+
+table tr td:nth-child(2) {
+  width: fit-content;
+  text-align: center;
+}
+
+table tr td:nth-child(3) {
+  width: 50%;
+  text-align: start;
+}
+
+table tr td:nth-child(4) {
+  min-width: 30%;
+  text-align: end;
+}
+
+span {
+  position: relative;
+}
+
+span .fa-crown {
+  color: white;
+  position: absolute;
+  font-size: 12px;
+  top: -2px;
+  left: -2px;
+}
